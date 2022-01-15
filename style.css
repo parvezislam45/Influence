@@ -1,16 +1,29 @@
-/* * ---------------------
-prebook
---------------------- */ */
-
-.container{
-    display: flex;
+/* ----------animission------ */
+.photo{
+    width: 500px;
+    height: 270px;
+    padding: 120px;
+}
+.photo img{
+    width:60%;
+}
+.photo-animation:hover .photo{
+    transform: scale(1.5) rotate(360deg);
+    transition: transform 2s ease-in;
 }
 h1{
     font-size: 35px;
+    font-family: 'Playfair Display', serif;
 }
 p{
     font-size: 16px;
+    font-family: 'Spline Sans', sans-serif;
 }
+/* --------start-jurney---- */
+.container-1{
+    display: flex;
+}
+
 .start-jurney{
     width: 500px;
     height: 270px;
@@ -33,6 +46,7 @@ p{
     width: 350px;
     height: 300px;
 }
+/* -------BrAND-Logo----- */
 .logo{
     display:flex;
     align-items: center;
@@ -41,17 +55,7 @@ p{
     height: 270px;
     padding: 120px;
 }
-.logo{
-    display:flex;
-    align-items: center;
-    column-gap: 50px;
-    width: 500px;
-    height: 270px;
-    padding: 120px;
-}
-/* -----------------------
-collection
------------------------- */
+/* ------------product---- */
 .heading{
     text-align: center;
     font-size: 30px;
@@ -61,13 +65,10 @@ collection
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap:15px;
     grid-row-gap:15px;
-    /* width: 500px;
-    height: 270px;
-    padding: 120px; */
 }
 .collection{
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 .collection img{
     width: 300px;
@@ -85,12 +86,16 @@ collection
     color:orange;
 }
 .see-more{
-    background-color: white;
+    background-color:white;
     font-size: 20px;
     border: none;
     color: #E02C6D;
-    float:right;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-left: 45px;
 }
+
 /* ------------------
 online-shop
 ------------------ */
@@ -117,4 +122,16 @@ footer
     padding: 30px;
     text-align: center;
     color: white;
+}
+/* --------------------
+media quary
+------------------- */
+@media only screen and (min-width:360px) and (max-width:1200px){
+    .container{
+        width: 100%;
+    }
+    .container-1, .logo, .collections{
+        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column;
+    }
 }
